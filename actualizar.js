@@ -4,15 +4,20 @@ var data = JSON.stringify({
     "collection": "Products",
     "database": "FakeStore",
     "dataSource": "ADSI2364482",
-    "projection": {
-        "title": 1,"price":1
+    "filter": { "id": 25},
+    "update":{
+    "$set": {
+
+        "id":24.8,
+        "description":"falda larga",
+    }
     }
     
 });
             
 var config = {
     method: 'post',
-    url: 'https://data.mongodb-api.com/app/data-qxmjq/endpoint/data/v1/action/find',
+    url: 'https://data.mongodb-api.com/app/data-qxmjq/endpoint/data/v1/action/updateOne',
     headers: {
       'Content-Type': 'application/json',
       'Access-Control-Request-Headers': '*',

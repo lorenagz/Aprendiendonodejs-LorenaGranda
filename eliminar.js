@@ -4,15 +4,14 @@ var data = JSON.stringify({
     "collection": "Products",
     "database": "FakeStore",
     "dataSource": "ADSI2364482",
-    "projection": {
-        "title": 1,"price":1
-    }
+    "filter": { "id": 25},
+    
     
 });
             
 var config = {
     method: 'post',
-    url: 'https://data.mongodb-api.com/app/data-qxmjq/endpoint/data/v1/action/find',
+    url: 'https://data.mongodb-api.com/app/data-qxmjq/endpoint/data/v1/action/insertOne',
     headers: {
       'Content-Type': 'application/json',
       'Access-Control-Request-Headers': '*',
